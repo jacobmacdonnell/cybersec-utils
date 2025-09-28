@@ -7,6 +7,7 @@ Purpose: practice offensive security skills and build repeatable workflows.
 
 ## Repository structure
 
+```text
 offsec-utils/
 ├─ scripts/ # Python + Bash scripts
 ├─ tools/ # Small custom utilities
