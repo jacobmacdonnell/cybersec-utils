@@ -1,6 +1,6 @@
 # offsec-utils
 
-A personal collection of red-team utilities, scripts, and lab writeups.  
+A personal collection of red-team utilities, and scripts.
 Purpose: practice offensive security skills and build repeatable workflows.  
 **For lab use only. Not intended for unauthorized activity.**
 
