@@ -1,23 +1,17 @@
 # offsec-utils
 
-A personal collection of red-team utilities, and scripts.
-Purpose: practice offensive security skills and build repeatable workflows.  
-**For lab use only. Not intended for unauthorized activity.**
+Personal collection of red-team scripts and lab writeups.  
+Purpose: practice offensive security skills.  
+**Lab use only. Do not run against systems you do not own or have permission to test.**
 
 ---
 
 ## Repository structure
 
     offsec-utils/
-    ├─ scripts/        # Python + Bash scripts
-    ├─ tools/          # Small custom utilities
-    ├─ labs/           # Local lab configs and notes
-    ├─ writeups/       # HTB, THM, CTF writeups
-    ├─ docs/           # Cheatsheets and workflows
-    ├─ ci/             # CI config (optional)
-    ├─ .pre-commit-config.yaml
-    ├─ requirements-dev.txt
-    └─ LICENSE
+    ├─ scripts/        # one-off helpers (bash, python, etc.)
+    ├─ writeups/       # HTB / THM / CTF notes and walkthroughs
+    └─ README.md
 
 ---
 
@@ -27,22 +21,8 @@ Purpose: practice offensive security skills and build repeatable workflows.
 git clone https://github.com/jacobmacdonnell/offsec-utils.git
 cd offsec-utils
 
-# create and activate venv (recommended)
-python -m venv .venv
-source .venv/bin/activate
+# run a Python script
+python3 scripts/nmap_parse.py scans/scan.xml
 
-# install dev deps (for linters / pre-commit)
-pip install -r requirements-dev.txt
-
-# install pre-commit hooks
-pre-commit install
-
-# run hooks once on all files
-pre-commit run --all-files
-
-# generate detect-secrets baseline (one-time)
-detect-secrets scan > .secrets.baseline
-git add .secrets.baseline
-
-# run example (requires a sample Nmap XML file)
-python3 scripts/python/nmap_parse.py scans/scan.xml
+# or a Bash script
+bash scripts/quick_scan.sh target.example
